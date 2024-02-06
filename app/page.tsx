@@ -82,7 +82,10 @@ export default function Home() {
               text="PRAVEEN BALASUBRAMANIAM"
               className="text-xl text-green-400"
             />
-            <RandomLetters text="Frontend Developer" />
+            <RandomLetters
+              text="
+Experienced Developer: React, React Native, Node.js, MongoDB"
+            />
           </div>
         </div>
         <h1 className="text-green-400 text-4xl font-bold">
