@@ -61,7 +61,7 @@ const WORK_EXPERIENCE: IWorkDetailsProps[] = [
     company: "CENDROL IT",
     start: "2023",
     end: "PRESENT",
-    desc: "Developed a design system for SoftNest with a focus on accessibility and user-friendliness.",
+    desc: "Provided my expertise in developing web and mobile applications using ReactJS,React-Native ,NodeJs, ExpressJs, MongoDB.",
     job: "SOFTWARE DEVELOPER",
   },
 ];
@@ -82,10 +82,7 @@ export default function Home() {
               text="PRAVEEN BALASUBRAMANIAM"
               className="text-xl text-green-400"
             />
-            <RandomLetters
-              text="
-Experienced Developer: React, React Native, Node.js, MongoDB"
-            />
+            <RandomLetters text="Experienced Developer: React, React Native, Node.js, MongoDB" />
           </div>
         </div>
         <h1 className="text-green-400 text-4xl font-bold">
