@@ -112,7 +112,12 @@ Experienced Developer: React, React Native, Node.js, MongoDB"
           <WorkDetails {...e} key={e.company} />
         ))}
         <div className="flex mt-8">
-          <ColoredBtn variant="normal" label="Download resume" />
+          <ColoredBtn
+            variant="normal"
+            href="/praveen-resume.pdf"
+            download
+            label="Download resume"
+          />
           <div className="w-8" />
           <ColoredBtn
             href="/get-in-touch"
