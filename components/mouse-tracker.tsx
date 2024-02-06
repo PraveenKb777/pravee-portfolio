@@ -48,7 +48,9 @@ export default function MouseTracker() {
         {grid?.map((row, rowIndex) => (
           <div className="ml-2 text-green-700 text-2xl" key={rowIndex}>
             {row.map((cell, colIndex) => (
-              <div key={colIndex}>{cell}</div>
+              <div className="mix-blend-color" key={colIndex}>
+                {cell}
+              </div>
             ))}
           </div>
         ))}
