@@ -84,3 +84,13 @@ body {
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 560px) {
+  html {
+    font-size: 10px;
+  }
+
+  main {
+    max-width: 90vw !important;
+  }
+}
