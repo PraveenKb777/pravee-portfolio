@@ -46,13 +46,13 @@ export const PROJECTS: PProjectData[] = [
     description:
       "An App which can generate construction and interior leads from brokers and real estate agents.Developed for CENDROL as per their requirement",
     title: "Partner app",
-    link: "https://play.google.com/store/apps/details?id=com.cendrol.procurement",
+    link: "https://play.google.com/store/apps/details?id=com.cendrolpartner",
   },
   {
     description:
       "App which will help the site engineers for ordering materials and handling miscellaneous expense from site and accepting order materials.Developed for CENDROL as per their requirement.",
     title: "Cendrol Procure",
-    link: "https://play.google.com/store/apps/details?id=com.cendrolpartner",
+    link: "https://play.google.com/store/apps/details?id=com.cendrol.procurement",
   },
 ];
 
