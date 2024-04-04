@@ -14,7 +14,7 @@ export default function Footer() {
         ))}
       </div>
       &copy; {new Date().getFullYear()} developed by praveen
-      <div className="text-gray-500">VER 1.0.0</div>
+      <div className="text-gray-500">VER 1.0.3</div>
     </footer>
   );
 }

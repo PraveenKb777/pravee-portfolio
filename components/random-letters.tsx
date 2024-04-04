@@ -5,9 +5,10 @@ import { useCallback, useEffect, useRef, useState } from "react";
 interface IRandomLetter {
   text: string;
   className?: string;
+  url?: string;
 }
 
-export default function RandomLetters({ text, className }: IRandomLetter) {
+export default function RandomLetters({ text, className, url }: IRandomLetter) {
   const [fText, setFText] = useState<string>("");
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -15,7 +16,7 @@ export default function RandomLetters({ text, className }: IRandomLetter) {
 
   const randomFun = useCallback(() => {
     let iteration = 0;
-    console.log("called");
+
     interval.current = setInterval(() => {
       let newText = text
         .split("")
@@ -41,5 +42,5 @@ export default function RandomLetters({ text, className }: IRandomLetter) {
     randomFun();
   }, [randomFun, text]);
 
-  return <div className={`${className}`}>{fText}</div>;
+  return <div onClick={() => url && window.open(url)} className={`${className}  ${url ? "hover:cursor-pointer" : "hover:cursor-default"}`} >{fText}</div>;
 }

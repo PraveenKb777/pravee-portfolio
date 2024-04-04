@@ -18,13 +18,13 @@ export default function WorkDetails({
   url,
 }: IWorkDetailsProps) {
   return (
-    <div className="text-xl flex justify-start mt-8 w-full">
-      <div className="mr-12 w-[450px] ">
+    <div className="text-xl flex justify-start mt-8 w-full ">
+      <div className="mr-12 w-[400px] ">
         {start} - {end}
       </div>
-      <div className="">
+      <div className="max-w-[400px]">
         <h2>{job}</h2>
-        <HoverColorChange label={company} />
+        <HoverColorChange label={company} url={url} />
         <p>{desc}</p>
       </div>
     </div>

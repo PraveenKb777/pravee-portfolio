@@ -60,10 +60,18 @@ const WORK_EXPERIENCE: IWorkDetailsProps[] = [
   {
     company: "CENDROL IT",
     start: "2023",
-    end: "PRESENT",
+    end: "2024",
     desc: "Provided my expertise in developing web and mobile applications using ReactJS,React-Native ,NodeJs, ExpressJs, MongoDB.",
     job: "SOFTWARE DEVELOPER",
   },
+  {
+    company: "Revature",
+    start: "2024",
+    end: "PRESENT",
+    desc: "Working for BrightSpeed onbehalf of Revature as a Fullstack Java Developer",
+    job: "Java Developer I",
+    url: "https://revature.com/?utm_source=in_redirect"
+  }
 ];
 
 export default function Home() {
@@ -105,7 +113,7 @@ export default function Home() {
         ))}
         <div className="h-12" />
         <SubHeading label="WORK" />
-        {WORK_EXPERIENCE.map((e) => (
+        {WORK_EXPERIENCE.reverse().map((e) => (
           <WorkDetails {...e} key={e.company} />
         ))}
         <div className="flex mt-8">
