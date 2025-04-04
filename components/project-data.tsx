@@ -1,3 +1,4 @@
+import Link from "next/link";
 import HoverColorChange from "./hover-color-change";
 
 export interface PProjectData {
@@ -15,9 +16,13 @@ export default function ProjectData({
 }: PProjectData) {
   return (
     <div className="w-full mt-8">
-      <a href={link ? link : undefined} target="_blank">
+      {link ? (
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <HoverColorChange label={title} />
+        </a>
+      ) : (
         <HoverColorChange label={title} />
-      </a>
+      )}
       <p className="mt-5 text-green-50 text-lg">{description}</p>
     </div>
   );

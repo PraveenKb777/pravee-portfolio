@@ -1,19 +1,13 @@
-"use client"
+"use client";
 import React from "react";
 
 interface PHoverColorChange {
   label: string;
-  url?: string
+  url?: string;
 }
-export default function HoverColorChange({ label, url }: PHoverColorChange) {
-
-
-
+export default function HoverColorChange({ label }: { label: string }) {
   return (
-    <div onClick={() => {
-      window.open(url)
-
-    }} className="text-white text- hover:text-green-500 cursor-pointer underline hover:decoration-green-500">
+    <div className="text-white hover:text-green-500 cursor-pointer underline hover:decoration-green-500">
       {label}
     </div>
   );

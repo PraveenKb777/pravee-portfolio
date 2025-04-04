@@ -22,25 +22,25 @@ export const PROJECTS: PProjectData[] = [
     description:
       "An interactive Board where you can create manage organization and collaborate real-time with your team",
     title: "MIRO-CLONE",
-    link: "https://board.pkbmg.shop",
+    link: "https://miro.praveen.top/",
   },
   {
     description:
       "A Simple Blog website where you can add, comment, and share your thoughts to world. ",
     title: "Blog for everyone",
-    link: "https://blog.pkbmg.shop",
+    link: "https://blog.praveen.top",
   },
   {
     description:
       "A portfolio website for my friend. designed by Rich and developed by Myself",
     title: "Rich-PortFolio",
-    link: "https://rich.pkbmg.shop",
+    link: "https://rich.praveen.top",
   },
   {
     description:
       "An App which can collect wifi and sensors at particular point which is developed for IPS team in Cendrol",
     title: "Wifi-Finger-Print-Scanner",
-    link: "https://personal.pkbmg.shop/WIFI%20Fingerprinting.apk",
+    link: "https://r2.praveen.top/WIFI%20Fingerprinting.apk",
   },
   {
     description:
@@ -70,8 +70,8 @@ const WORK_EXPERIENCE: IWorkDetailsProps[] = [
     end: "PRESENT",
     desc: "Working for BrightSpeed onbehalf of Revature as a Fullstack Java Developer",
     job: "Java Developer I",
-    url: "https://revature.com/?utm_source=in_redirect"
-  }
+    url: "https://revature.com/?utm_source=in_redirect",
+  },
 ];
 
 export default function Home() {
