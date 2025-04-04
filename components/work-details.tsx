@@ -24,7 +24,7 @@ export default function WorkDetails({
       </div>
       <div className="max-w-[400px]">
         <h2>{job}</h2>
-        <HoverColorChange label={company} url={url} />
+        <HoverColorChange label={company} />
         <p>{desc}</p>
       </div>
     </div>
