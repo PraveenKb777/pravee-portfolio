@@ -8,6 +8,7 @@ import Image from "next/image";
 import TechStack from "@/components/tech-stack";
 import Stats from "@/components/stats";
 import CurrentlyBuilding from "@/components/currently-building";
+import FeaturedWork from "@/components/home/FeaturedWork";
 export const CONNECTION = [
   {
     label: "GitHub",
@@ -24,31 +25,6 @@ export const CONNECTION = [
   },
 ];
 
-export const PROJECTS = [
-  {
-    title: "BumpDaily",
-    category: "Production Mobile App",
-    description:
-      "A full-stack social platform built using React Native, Hono, Cloudflare Workers and Cloudflare R2.",
-    tech: ["React Native", "TypeScript", "Cloudflare", "Hono"],
-  },
-
-  {
-    title: "Brightspeed",
-    category: "Enterprise Mobile App",
-    description:
-      "Maintaining and modernizing the Brightspeed account management application used across the US.",
-    tech: ["React Native", "Redux Toolkit", "React Query", "TypeScript"],
-  },
-
-  {
-    title: "Procurement",
-    category: "Construction Platform",
-    description:
-      "Inventory and procurement management application for site engineers.",
-    tech: ["React Native", "Node", "MongoDB"],
-  },
-];
 
 const EXPERIENCE = [
   {
@@ -65,25 +41,6 @@ const EXPERIENCE = [
     end: "2024",
     job: "Full Stack Mobile Developer",
     desc: "Built Procurement and Partners mobile applications from scratch with React Native, Node.js, Express and PostgreSQL.",
-  },
-];
-
-const STATS = [
-  {
-    title: "250K+",
-    subtitle: "Downloads",
-  },
-  {
-    title: "40+",
-    subtitle: "REST APIs",
-  },
-  {
-    title: "3+",
-    subtitle: "Years",
-  },
-  {
-    title: "0.68 → 0.76",
-    subtitle: "Migration",
   },
 ];
 
@@ -134,28 +91,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-          {STATS.map((stat) => (
-            <div
-              key={stat.title}
-              className="rounded-2xl border border-zinc-800 p-6"
-            >
-              <h2 className="text-3xl font-bold">{stat.title}</h2>
+      <Stats />
 
-              <p className="mt-2 text-zinc-500">{stat.subtitle}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section>
-        <SubHeading label="Featured Projects" />
-
-        {PROJECTS.map((project) => (
-          <ProjectData key={project.title} {...project} />
-        ))}
-      </section>
+      <FeaturedWork />
 
       <section>
         <SubHeading label="Experience" />

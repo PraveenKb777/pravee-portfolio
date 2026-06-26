@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const links = [
   {
@@ -20,33 +22,40 @@ const links = [
 
 export default function Header() {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-lg">
-      <div className="flex items-center justify-between border-b border-zinc-800 py-6">
+    <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-xl">
+      <div className="relative flex items-center justify-between border-b border-zinc-800 py-6">
+        {/* Logo */}
 
         <Link href="/">
           <div>
-            <h1 className="text-xl font-semibold tracking-tight">
+            <h1 className="text-xl font-bold tracking-tight">
               Praveen K B
             </h1>
 
-            <p className="font-mono text-sm text-zinc-500">
-              React Native Developer
+            <p className="text-sm text-zinc-500">
+              React Native Engineer
             </p>
           </div>
         </Link>
 
-        <nav className="flex items-center gap-8">
+        {/* Desktop Navigation */}
 
+        <nav className="hidden items-center gap-8 md:flex">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`transition-all hover:text-green-400 ${
+              className={`transition ${
                 pathname === link.href
                   ? "text-green-400"
-                  : "text-zinc-400"
+                  : "text-zinc-400 hover:text-white"
               }`}
             >
               {link.title}
@@ -61,6 +70,47 @@ export default function Header() {
             Resume
           </a>
         </nav>
+
+        {/* Mobile Button */}
+
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          className="flex h-11 w-11 items-center justify-center rounded-xl border border-zinc-700 bg-zinc-900 text-white md:hidden"
+          aria-label="Toggle Menu"
+        >
+          {open ? <X size={22} /> : <Menu size={22} />}
+        </button>
+
+        {/* Mobile Dropdown */}
+
+        {open && (
+          <div className="absolute left-0 right-0 top-full mt-3 rounded-2xl border border-zinc-800 bg-zinc-950 p-4 shadow-2xl md:hidden">
+            <nav className="flex flex-col gap-2">
+              {links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`rounded-xl px-4 py-3 transition ${
+                    pathname === link.href
+                      ? "bg-green-500/10 text-green-400"
+                      : "text-zinc-300 hover:bg-zinc-900"
+                  }`}
+                >
+                  {link.title}
+                </Link>
+              ))}
+
+              <a
+                href="/praveen-resume.pdf"
+                download
+                className="mt-3 rounded-xl bg-green-500 px-4 py-3 text-center font-medium text-black transition hover:bg-green-400"
+              >
+                Download Resume
+              </a>
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   );

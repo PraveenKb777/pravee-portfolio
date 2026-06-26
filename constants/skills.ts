@@ -1,0 +1,16 @@
+export const SKILLS = [
+  "React Native",
+  "TypeScript",
+  "React",
+  "Node.js",
+  "Hono",
+  "Cloudflare Workers",
+  "Redux Toolkit",
+  "React Query",
+  "PostgreSQL",
+  "MongoDB",
+  "SQLite",
+  "Reanimated",
+  "GitHub Actions",
+  "Linux",
+];

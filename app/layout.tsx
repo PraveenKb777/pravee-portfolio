@@ -1,9 +1,11 @@
+import Navbar from "@/components/layout/Navbar";
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
+import Aurora from "@/components/background/Aurora";
+import BlueprintGrid from "@/components/background/BlueprintGrid";
 import Footer from "@/components/footer";
-import MouseTracker from "@/components/mouse-tracker";
+import PageTransition from "@/components/layout/PageTransition";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -42,12 +44,14 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${mono.variable} bg-black text-zinc-100 antialiased`}
       >
-        <MouseTracker />
+        {/* <MouseTracker /> */}
+        <BlueprintGrid />
+
+        <Aurora />
 
         <div className="mx-auto min-h-screen max-w-5xl px-6 md:px-12">
-          <Header />
-
-          {children}
+          <Navbar />
+          <PageTransition>{children}</PageTransition>
 
           <Footer />
         </div>
