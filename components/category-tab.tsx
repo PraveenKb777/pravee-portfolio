@@ -1,17 +1,19 @@
-import React from "react";
-
 export interface PCategory {
   url: string;
-  label: string;
-  isEmail?: boolean;
+ label: string;
+ isEmail?: boolean;
 }
-export default function CategoryTab({ label, url, isEmail }: PCategory) {
+
+export default function CategoryTab({
+  url,
+  label,
+  isEmail,
+}: PCategory) {
   return (
     <a
       href={url}
       target={isEmail ? undefined : "_blank"}
-      key={label}
-      className="text-green-400 text-xl  mr-5 bg-[#003d1e] p-3 hover:bg-green-800 transition-all cursor-pointer"
+      className="rounded-full border border-zinc-700 px-5 py-3 text-sm uppercase tracking-wider text-zinc-300 transition-all duration-300 hover:border-green-500 hover:bg-green-500 hover:text-black"
     >
       {label}
     </a>

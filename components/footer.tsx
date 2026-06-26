@@ -1,20 +1,49 @@
-const DUMMY = "¯_(◉‿◉)_/¯".split("");
-
 export default function Footer() {
   return (
-    <footer className="self-start text-lg">
-      <div className="my-6">
-        {DUMMY.map((e, i) => (
-          <span
-            className="hover:text-green-400 transition-all cursor-default"
-            key={i + e}
+    <footer className="border-t border-zinc-800 py-16">
+
+      <div className="flex flex-col gap-5">
+
+        <p className="text-3xl font-semibold">
+          Let's build something amazing.
+        </p>
+
+        <p className="max-w-xl text-zinc-500">
+          I'm currently open to React Native, Mobile Engineer and
+          Full Stack opportunities.
+        </p>
+
+        <div className="flex gap-5 pt-4">
+
+          <a
+            href="mailto:kbpraveen1999@gmail.com"
+            className="text-zinc-400 hover:text-green-400"
           >
-            {e}
-          </span>
-        ))}
+            Email
+          </a>
+
+          <a
+            href="https://github.com/PraveenKb777"
+            target="_blank"
+            className="text-zinc-400 hover:text-green-400"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://linkedin.com/in/praveen-balasubramaniam"
+            target="_blank"
+            className="text-zinc-400 hover:text-green-400"
+          >
+            LinkedIn
+          </a>
+        </div>
+
+        <div className="pt-10 text-sm text-zinc-600">
+          © {new Date().getFullYear()} Praveen K B
+        </div>
+
       </div>
-      &copy; {new Date().getFullYear()} developed by praveen
-      <div className="text-gray-500">VER 1.0.3</div>
     </footer>
   );
 }

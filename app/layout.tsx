@@ -1,17 +1,35 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Inter } from "next/font/google";
 import "./globals.css";
-import MouseTracker from "@/components/mouse-tracker";
-import Link from "next/link";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import MouseTracker from "@/components/mouse-tracker";
 
-const inter = IBM_Plex_Mono({ weight: ["400", "700"], subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const mono = IBM_Plex_Mono({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
 
 export const metadata: Metadata = {
-  title: "Praveen Portfolio",
+  title: "Praveen K B | React Native Developer",
   description:
-    "Mastering the Modern Stack: React, React Native, Node.js, MongoDB",
+    "React Native Developer specializing in production mobile applications, performance optimization and modern full-stack development.",
+  keywords: [
+    "React Native",
+    "React",
+    "TypeScript",
+    "Node.js",
+    "Hono",
+    "Cloudflare Workers",
+    "Mobile Engineer",
+  ],
+  authors: [{ name: "Praveen K B" }],
 };
 
 export default function RootLayout({
@@ -22,15 +40,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} flex flex-col justify-center items-center py-12`}
+        className={`${inter.variable} ${mono.variable} bg-black text-zinc-100 antialiased`}
       >
-        <div className="max-w-[640px]  cssanimation sequence fadeInBottom">
+        <MouseTracker />
+
+        <div className="mx-auto min-h-screen max-w-5xl px-6 md:px-12">
           <Header />
+
           {children}
+
           <Footer />
         </div>
-
-        <MouseTracker />
       </body>
     </html>
   );

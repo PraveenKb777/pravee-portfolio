@@ -1,136 +1,184 @@
 import AvailableWork from "@/components/avilable-work";
-import CategoryTab, { PCategory } from "@/components/category-tab";
 import ColoredBtn from "@/components/colored-btn";
-import MouseTracker from "@/components/mouse-tracker";
-import ProjectData, { PProjectData } from "@/components/project-data";
-import RandomLetters from "@/components/random-letters";
+import CategoryTab from "@/components/category-tab";
+import ProjectData from "@/components/project-data";
 import SubHeading from "@/components/sub-heading";
-import WorkDetails, { IWorkDetailsProps } from "@/components/work-details";
+import WorkDetails from "@/components/work-details";
 import Image from "next/image";
-
-export const CONNECTION: PCategory[] = [
-  { label: "GITHUB", url: "https://github.com/PraveenKb777" },
+import TechStack from "@/components/tech-stack";
+import Stats from "@/components/stats";
+import CurrentlyBuilding from "@/components/currently-building";
+export const CONNECTION = [
   {
-    label: "LINKEDIN",
-    url: "https://www.linkedin.com/in/praveen-balasubramaniam/",
-  },
-  { label: "EMAIL", url: "mailto:kbpraveen1999@gmail.com", isEmail: true },
-];
-
-export const PROJECTS: PProjectData[] = [
-  {
-    description:
-      "An interactive Board where you can create manage organization and collaborate real-time with your team",
-    title: "MIRO-CLONE",
-    link: "https://miro.praveen.top/",
+    label: "GitHub",
+    url: "https://github.com/PraveenKb777",
   },
   {
-    description:
-      "A Simple Blog website where you can add, comment, and share your thoughts to world. ",
-    title: "Blog for everyone",
-    link: "https://blog.praveen.top",
+    label: "LinkedIn",
+    url: "https://linkedin.com/in/praveen-balasubramaniam",
   },
   {
-    description:
-      "A portfolio website for my friend. designed by Rich and developed by Myself",
-    title: "Rich-PortFolio",
-    link: "https://rich.praveen.top",
-  },
-  {
-    description:
-      "An App which can collect wifi and sensors at particular point which is developed for IPS team in Cendrol",
-    title: "Wifi-Finger-Print-Scanner",
-    link: "https://r2.praveen.top/WIFI%20Fingerprinting.apk",
-  },
-  {
-    description:
-      "An App which can generate construction and interior leads from brokers and real estate agents.Developed for CENDROL as per their requirement",
-    title: "Partner app",
-    link: "https://play.google.com/store/apps/details?id=com.cendrolpartner",
-  },
-  {
-    description:
-      "App which will help the site engineers for ordering materials and handling miscellaneous expense from site and accepting order materials.Developed for CENDROL as per their requirement.",
-    title: "Cendrol Procure",
-    link: "https://play.google.com/store/apps/details?id=com.cendrol.procurement",
+    label: "Email",
+    url: "mailto:kbpraveen1999@gmail.com",
+    isEmail: true,
   },
 ];
 
-const WORK_EXPERIENCE: IWorkDetailsProps[] = [
+export const PROJECTS = [
   {
-    company: "CENDROL IT",
-    start: "2023",
-    end: "2024",
-    desc: "Provided my expertise in developing web and mobile applications using ReactJS,React-Native ,NodeJs, ExpressJs, MongoDB.",
-    job: "SOFTWARE DEVELOPER",
+    title: "BumpDaily",
+    category: "Production Mobile App",
+    description:
+      "A full-stack social platform built using React Native, Hono, Cloudflare Workers and Cloudflare R2.",
+    tech: ["React Native", "TypeScript", "Cloudflare", "Hono"],
   },
+
+  {
+    title: "Brightspeed",
+    category: "Enterprise Mobile App",
+    description:
+      "Maintaining and modernizing the Brightspeed account management application used across the US.",
+    tech: ["React Native", "Redux Toolkit", "React Query", "TypeScript"],
+  },
+
+  {
+    title: "Procurement",
+    category: "Construction Platform",
+    description:
+      "Inventory and procurement management application for site engineers.",
+    tech: ["React Native", "Node", "MongoDB"],
+  },
+];
+
+const EXPERIENCE = [
   {
     company: "Revature",
     start: "2024",
-    end: "PRESENT",
-    desc: "Working for BrightSpeed onbehalf of Revature as a Fullstack Java Developer",
-    job: "Java Developer I",
-    url: "https://revature.com/?utm_source=in_redirect",
+    end: "Present",
+    job: "Associate Developer",
+    desc: "Working with Brightspeed on a large-scale React Native application. Migrated React Native 0.68 → 0.76.6, redesigned 20+ screens, integrated 40+ APIs and improved application performance.",
+  },
+
+  {
+    company: "Cendrol",
+    start: "2023",
+    end: "2024",
+    job: "Full Stack Mobile Developer",
+    desc: "Built Procurement and Partners mobile applications from scratch with React Native, Node.js, Express and PostgreSQL.",
+  },
+];
+
+const STATS = [
+  {
+    title: "250K+",
+    subtitle: "Downloads",
+  },
+  {
+    title: "40+",
+    subtitle: "REST APIs",
+  },
+  {
+    title: "3+",
+    subtitle: "Years",
+  },
+  {
+    title: "0.68 → 0.76",
+    subtitle: "Migration",
   },
 ];
 
 export default function Home() {
   return (
-    <>
-      <main
-        style={{ transform: "perspective(1200px)" }}
-        className="relative flex justify-start py-12 flex-col"
-      >
-        <div className="py-12 flex justify-start items-center">
-          <div className="bg-white rounded-full h-12 w-12 overflow-hidden">
-            <Image src={"/avatar.jpeg"} alt="Praveen" height={48} width={48} />
-          </div>
-          <div className="ml-2">
-            <RandomLetters
-              text="PRAVEEN BALASUBRAMANIAM"
-              className="text-xl text-green-400"
-            />
-            <RandomLetters text="Experienced Developer: React, React Native, Node.js, MongoDB" />
+    <main className="py-20">
+      <section>
+        <div className="flex items-center gap-5">
+          <Image
+            src="/avatar.jpeg"
+            alt="Praveen"
+            width={72}
+            height={72}
+            className="rounded-full border border-zinc-700"
+          />
+
+          <div>
+            <p className="text-green-400 font-medium">
+              Available for opportunities
+            </p>
+
+            <h1 className="text-5xl font-bold leading-tight mt-2">
+              React Native
+              <br />
+              Developer.
+            </h1>
           </div>
         </div>
-        <h1 className="text-green-400 text-4xl font-bold">
-          I BUILD ACCESSIBLE, INCLUSIVE PRODUCTS
-        </h1>
-        <p className="text-xl mt-5">
-          I&apos;m a passionate and self-driven developer committed to creating
-          web applications with focus on user-friendliness.
+
+        <p className="mt-10 max-w-2xl text-xl text-zinc-400 leading-9">
+          I build production-grade mobile applications with React Native,
+          TypeScript and modern backend technologies. Currently contributing to
+          Brightspeed while building scalable personal products powered by
+          Cloudflare Workers.
         </p>
+
         <AvailableWork />
-        <SubHeading label="CONNECT" />
-        <div className="flex flex-wrap my-8">
-          {CONNECTION.map((e) => {
-            return <CategoryTab {...e} key={e.url} />;
-          })}
-        </div>
-        <SubHeading label="PROJECTS" />
-        {PROJECTS.slice(0, 3).map((e) => (
-          <ProjectData {...e} key={e.description} />
-        ))}
-        <div className="h-12" />
-        <SubHeading label="WORK" />
-        {WORK_EXPERIENCE.reverse().map((e) => (
-          <WorkDetails {...e} key={e.company} />
-        ))}
-        <div className="flex mt-8">
+
+        <div className="mt-10 flex gap-4">
           <ColoredBtn
-            variant="normal"
             href="/praveen-resume.pdf"
             download
-            label="Download resume"
-          />
-          <div className="w-8" />
-          <ColoredBtn
-            href="/get-in-touch"
             variant="colored"
-            label="Get in Touch"
+            label="Download Resume"
           />
+
+          <ColoredBtn href="/projects" variant="normal" label="View Projects" />
         </div>
-      </main>
-    </>
+      </section>
+
+      <section>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+          {STATS.map((stat) => (
+            <div
+              key={stat.title}
+              className="rounded-2xl border border-zinc-800 p-6"
+            >
+              <h2 className="text-3xl font-bold">{stat.title}</h2>
+
+              <p className="mt-2 text-zinc-500">{stat.subtitle}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <SubHeading label="Featured Projects" />
+
+        {PROJECTS.map((project) => (
+          <ProjectData key={project.title} {...project} />
+        ))}
+      </section>
+
+      <section>
+        <SubHeading label="Experience" />
+
+        {EXPERIENCE.map((item) => (
+          <WorkDetails key={item.company} {...item} />
+        ))}
+      </section>
+      <TechStack />
+
+      <Stats />
+
+      <CurrentlyBuilding />
+
+      <section>
+        <SubHeading label="Connect" />
+
+        <div className="flex flex-wrap gap-4 mt-8">
+          {CONNECTION.map((item) => (
+            <CategoryTab key={item.label} {...item} />
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }
