@@ -5,11 +5,11 @@ export default function Footer() {
       <div className="flex flex-col gap-5">
 
         <p className="text-3xl font-semibold">
-          Let's build something amazing.
+          Let&apos;s build something amazing.
         </p>
 
         <p className="max-w-xl text-zinc-500">
-          I'm currently open to React Native, Mobile Engineer and
+          I&apos;m currently open to React Native, Mobile Engineer and
           Full Stack opportunities.
         </p>
 
