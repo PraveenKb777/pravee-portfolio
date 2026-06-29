@@ -162,9 +162,9 @@ export const PROJECTS: Project[] = [
 
   github: "https://github.com/PraveenKb777",
 
-  playStore: "YOUR_PLAYSTORE_LINK",
+  playStore: "https://play.google.com/store/apps/details?id=com.bumpdaily&pcampaignid=web_share",
 
-  appStore: "YOUR_APPSTORE_LINK",
+  appStore: "https://apps.apple.com/gb/app/bumpdaily/id6763509522",
 },
 
   {
