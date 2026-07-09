@@ -73,7 +73,7 @@ export default function Hero() {
             />
 
             <ColoredBtn
-              href="/projects"
+              href="/work"
               variant="normal"
               label="View Projects"
             />
