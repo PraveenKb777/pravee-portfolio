@@ -115,10 +115,10 @@ export const PROJECTS: Project[] = [
     "Designed both frontend and backend from scratch. Built authentication, feeds, media uploads, notifications and scalable REST APIs using Cloudflare Workers.",
 
   impact: [
-    "250K+ Downloads",
     "Android",
     "iOS",
     "Cloudflare Edge",
+    "Micro services",
   ],
 
   technologies: [
@@ -145,6 +145,7 @@ export const PROJECTS: Project[] = [
     "Workers",
     "Hono",
     "PostgreSQL",
+    "D1 DB",
     "Cloudflare R2",
   ],
 
