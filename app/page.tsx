@@ -87,7 +87,7 @@ export default function Home() {
             label="Download Resume"
           />
 
-          <ColoredBtn href="/projects" variant="normal" label="View Projects" />
+          <ColoredBtn href="/work" variant="normal" label="View Projects" />
         </div>
       </section>
 
